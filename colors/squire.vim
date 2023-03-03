@@ -76,7 +76,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi CursorLineFold     ctermfg=251         ctermbg=238         cterm=NONE                    guifg=#c6c6c6     guibg=#444444     gui=NONE
   hi SignColumn         ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi MatchParen         ctermfg=NONE        ctermbg=240         cterm=NONE                    guifg=NONE        guibg=#585858     gui=NONE
-  hi ModeMsg            ctermfg=66          ctermbg=NONE        cterm=NONE                    guifg=#80a0ff     guibg=NONE        gui=NONE
+  hi ModeMsg            ctermfg=66          ctermbg=NONE        cterm=NONE                    guifg=#5f8787     guibg=NONE        gui=NONE
   hi MoreMsg            ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi NonText            ctermfg=250         ctermbg=237         cterm=NONE                    guifg=#bcbcbc     guibg=#3a3a3a     gui=NONE
   hi Pmenu              ctermfg=230         ctermbg=234         cterm=NONE                    guifg=#ffffd7     guibg=#1c1c1c     gui=NONE
@@ -95,10 +95,17 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi TabLineSel         ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi Title              ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi VisualNOS          ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
+  hi MoreMsg            ctermfg=66          ctermbg=NONE        cterm=NONE                    guifg=#5f8787     guibg=NONE        gui=NONE
 
-  hi link Number Constant
-  hi link Float Constant
-  hi link Boolean Constant
+  hi! link Number Constant
+  hi! link Float Constant
+  hi! link Boolean Constant
+  hi! link PreProc Special
+  hi! link Define Special
+  hi! link Include Special
+  hi! link Macro Special
+  hi! link PreCondit Special
+  hi! link markdownItalic Special
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set t_Co=16
