@@ -30,8 +30,8 @@ let g:colors_name = "squire"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
-  hi Normal             ctermfg=230         ctermbg=234         cterm=NONE                    guifg=#ffffd7     guibg=#1c1c1c     gui=NONE
-  hi Terminal           ctermfg=230         ctermbg=234         cterm=NONE                    guifg=#ffffd7     guibg=#1c1c1c     gui=NONE
+  hi Normal             ctermfg=230         ctermbg=233         cterm=NONE                    guifg=#ffffd7     guibg=#121212     gui=NONE
+  hi Terminal           ctermfg=230         ctermbg=233         cterm=NONE                    guifg=#ffffd7     guibg=#121212     gui=NONE
   hi Visual             ctermfg=NONE        ctermbg=244         cterm=NONE                    guifg=NONE        guibg=#808080     gui=NONE
   hi Constant           ctermfg=138         ctermbg=NONE        cterm=NONE                    guifg=#af8787     guibg=NONE        gui=NONE
 
@@ -42,7 +42,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi CurSearch          ctermfg=NONE        ctermbg=236         cterm=NONE                    guifg=NONE        guibg=#303030     gui=NONE
   hi WildMenu           ctermfg=NONE        ctermbg=237         cterm=NONE                    guifg=NONE        guibg=#3a3a3a     gui=NONE
   hi Cursor             ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=#d75faf     gui=NONE
-  hi Special            ctermfg=178         ctermbg=NONE        cterm=NONE                    guifg=#D7af00     guibg=NONE        gui=NONE
+  hi Special            ctermfg=143         ctermbg=NONE        cterm=NONE                    guifg=#afaf5f     guibg=NONE        gui=NONE
   hi Comment            ctermfg=66          ctermbg=NONE        cterm=NONE                    guifg=#5f8787     guibg=NONE        gui=NONE
   hi StatusLine         ctermfg=234         ctermbg=251         cterm=NONE                    guifg=#1c1c1c     guibg=#c6c6c6     gui=NONE
   hi StatusLineNC       ctermfg=251         ctermbg=234         cterm=NONE                    guifg=#c6c6c6     guibg=#1c1c1c     gui=NONE
