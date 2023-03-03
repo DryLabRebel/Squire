@@ -1,23 +1,23 @@
 " Vim color file
 " Maintainer: Geoff English <geoff_anthony@hotmail.com>
-" Last Change: (24-02-2023) 
+" Last Change: (03-03-2023)
 " Heavily inspired from Apprentice and torte
 
 " To Do:
 " - Make the background darker *check*
 " - What affects the colour of numbers *check*
-" - what affects the colour of Markdown Headings?
-" - One by one - work what each group does, and set the cterms
-" - One by one - set the equivalent gui colour in hex
+" - what affects the colour of Markdown Headings? *check*
+" - what affects the colour of Markdown italics? *check*
+" - One by one - work what each group does, and set the cterms *check*
+" - One by one - set the equivalent gui colour in hex *check*
 " - Create/Decide on a formal colour palette and fine tune!
 " - Modify for True color, 8/16 colour, and 256 colour terminals
 " - Figure out what's being modified in the background!
 " - figure out what/why changes when you refresh your vimrc
-"   - Mostly this appears to be relative to when you set the background -- some colours should be set first!
-" - make italics better in markdown
+" - make italics better in markdown *check*
 " - make bold actually bold in markdown
 " - make bold italic actually bold in markdown
-" - Get access to your github account !@_@! 
+" - Get access to your github account !@_@! *check*
 
 hi clear
 if exists("syntax_on")
