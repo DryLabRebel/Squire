@@ -118,6 +118,10 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi markdownBoldDelimiter            ctermfg=24          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
   hi markdownBoldItalic               ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
   hi markdownBoldItalicDelimiter      ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
+  hi markdownCode                     ctermfg=102         ctermbg=NONE        cterm=NONE                    guifg=#878787     guibg=NONE        gui=NONE
+
+  hi! link markdownCodeBlock markdownCode
+  hi! link markdownCodeDelimiter markdownCode
 
 " markdownAutomaticLink  markdownBlockquote  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
 
