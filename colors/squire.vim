@@ -93,9 +93,11 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi TabLine            ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi TabLineFill        ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi TabLineSel         ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
-  hi Title              ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi VisualNOS          ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=NONE        gui=NONE
   hi MoreMsg            ctermfg=66          ctermbg=NONE        cterm=NONE                    guifg=#5f8787     guibg=NONE        gui=NONE
+  hi Function           ctermfg=103         ctermbg=NONE        cterm=NONE                    guifg=#8787af     guibg=NONE        gui=NONE
+  hi Identifier         ctermfg=67          ctermbg=NONE        cterm=NONE                    guifg=#5f87af     guibg=NONE        gui=NONE
+  hi Title              ctermfg=231         ctermbg=NONE        cterm=bold                    guifg=#ffffff     guibg=NONE        gui=bold
 
   hi! link Number Constant
   hi! link Float Constant
@@ -105,7 +107,21 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi! link Include Special
   hi! link Macro Special
   hi! link PreCondit Special
-  hi! link markdownItalic Special
+  hi! link htmlLink Function
+
+" Markdown
+
+  hi MarkdownItalic                   ctermfg=23          ctermbg=NONE        cterm=NONE                    guifg=#005f5f     guibg=NONE        gui=NONE  
+  hi markdownItalicDelimiter          ctermfg=23          ctermbg=NONE        cterm=NONE                    guifg=#005f5f     guibg=NONE        gui=NONE  
+  hi markdownBold                     ctermfg=24          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
+  hi markdownBoldDelimiter            ctermfg=24          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
+  hi markdownBoldItalic               ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
+  hi markdownBoldItalicDelimiter      ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
+" markdownAutomaticLink  markdownBlockquote  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  markdownH1
+" markdownH1Delimiter  markdownH2  markdownH2Delimiter  markdownH3  markdownH3Delimiter  markdownH4  markdownH4Delimiter  markdownH5  markdownH5Delimiter  markdownH6  markdownH6Delimiter  markdownHeadingDelimiter  markdownHeadingRule  markdownId
+" markdownIdDeclaration  markdownIdDelimiter  markdownLinkText  markdownListMarker  markdownOrderedListMarker  markdownRule  markdownStrike  markdownStrikeDelimiter  markdownUrl
+" markdownUrlDelimiter  markdownUrlTitle  markdownUrlTitleDelimiter
+
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set t_Co=16
