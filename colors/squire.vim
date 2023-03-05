@@ -111,14 +111,17 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
 " Markdown
 
+  hi markdownHeadingDelimiter         ctermfg=23          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
   hi MarkdownItalic                   ctermfg=23          ctermbg=NONE        cterm=NONE                    guifg=#005f5f     guibg=NONE        gui=NONE  
   hi markdownItalicDelimiter          ctermfg=23          ctermbg=NONE        cterm=NONE                    guifg=#005f5f     guibg=NONE        gui=NONE  
   hi markdownBold                     ctermfg=24          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
   hi markdownBoldDelimiter            ctermfg=24          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
   hi markdownBoldItalic               ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
   hi markdownBoldItalicDelimiter      ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
-" markdownAutomaticLink  markdownBlockquote  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  markdownH1
-" markdownH1Delimiter  markdownH2  markdownH2Delimiter  markdownH3  markdownH3Delimiter  markdownH4  markdownH4Delimiter  markdownH5  markdownH5Delimiter  markdownH6  markdownH6Delimiter  markdownHeadingDelimiter  markdownHeadingRule  markdownId
+
+" markdownAutomaticLink  markdownBlockquote  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
+
+  " markdownHeadingRule  markdownId
 " markdownIdDeclaration  markdownIdDelimiter  markdownLinkText  markdownListMarker  markdownOrderedListMarker  markdownRule  markdownStrike  markdownStrikeDelimiter  markdownUrl
 " markdownUrlDelimiter  markdownUrlTitle  markdownUrlTitleDelimiter
 
