@@ -42,7 +42,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi CurSearch          ctermfg=NONE        ctermbg=236         cterm=NONE                    guifg=NONE        guibg=#303030     gui=NONE
   hi WildMenu           ctermfg=NONE        ctermbg=237         cterm=NONE                    guifg=NONE        guibg=#3a3a3a     gui=NONE
   hi Cursor             ctermfg=NONE        ctermbg=NONE        cterm=NONE                    guifg=NONE        guibg=#d75faf     gui=NONE
-  hi Special            ctermfg=143         ctermbg=NONE        cterm=NONE                    guifg=#afaf5f     guibg=NONE        gui=NONE
+  hi Special            ctermfg=108         ctermbg=NONE        cterm=NONE                    guifg=#87af87     guibg=NONE        gui=NONE
   hi Comment            ctermfg=66          ctermbg=NONE        cterm=NONE                    guifg=#5f8787     guibg=NONE        gui=NONE
   hi StatusLine         ctermfg=234         ctermbg=251         cterm=NONE                    guifg=#1c1c1c     guibg=#c6c6c6     gui=NONE
   hi StatusLineNC       ctermfg=251         ctermbg=234         cterm=NONE                    guifg=#c6c6c6     guibg=#1c1c1c     gui=NONE
@@ -102,11 +102,13 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi! link Number Constant
   hi! link Float Constant
   hi! link Boolean Constant
+
   hi! link PreProc Special
   hi! link Define Special
   hi! link Include Special
   hi! link Macro Special
   hi! link PreCondit Special
+
   hi! link htmlLink Function
 
 " Markdown
@@ -119,11 +121,12 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi markdownBoldItalic               ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
   hi markdownBoldItalicDelimiter      ctermfg=24          ctermbg=NONE        cterm=bold                    guifg=#005f87     guibg=NONE        gui=bold
   hi markdownCode                     ctermfg=102         ctermbg=NONE        cterm=NONE                    guifg=#878787     guibg=NONE        gui=NONE
+  hi markdownBlockquote               ctermfg=23          ctermbg=NONE        cterm=NONE                    guifg=#005f87     guibg=NONE        gui=NONE
 
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
 
-" markdownAutomaticLink  markdownBlockquote  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
+" markdownAutomaticLink  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
 
   " markdownHeadingRule  markdownId
 " markdownIdDeclaration  markdownIdDelimiter  markdownLinkText  markdownListMarker  markdownOrderedListMarker  markdownRule  markdownStrike  markdownStrikeDelimiter  markdownUrl
