@@ -1,25 +1,47 @@
-" Vim color file
+" Name: squire
 " Maintainer: Geoff English <geoff_anthony@hotmail.com>
-" Last Updated: (06-03-2023)
-" Heavily inspired by Apprentice and torte
+" Last Updated: (07-03-2023)
+" Website:      https://github.com/DryLabRebel/Squire
+" License:      MIT
+
+" Inspired by apprentice, it explicitly sets a few extra
+" options in markdown, and has a slightly higher contrast against the
+" background, for working in more well lit environments
 
 " To Do:
-" - Create/Decide on a formal colour palette and fine tune!
-" - Replace the todo list with a pallette list
 " - Set the 8-16 bit colour pallette
 
-" - Make the background darker *check*
-" - What affects the colour of numbers *check*
-" - what affects the colour of Markdown Headings? *check*
-" - what affects the colour of Markdown italics? *check*
-" - One by one - work what each group does, and set the cterms *check*
-" - One by one - set the equivalent gui colour in hex *check*
-" - Figure out what's being modified in the background! *check*
-" - figure out what/why changes when you refresh your vimrc *check*
-" - make italics better in markdown *check*
-" - make bold actually bold in markdown *check*
-" - make bold italic actually bold in markdown *check*
-" - Get access to your github account !@_@! *check*
+" Colour pallette
+
+" White           15  #ffffff 
+" Black           16  #000000
+" DeepSkyBlue4    23  #005f5f 
+" DeepSkyBlue4    24  #005f87 
+" Turquoise4      30  #008787 
+" PaleTurquoise4  66  #5f8787 
+" SteelBlue       67  #5f87af 
+" SkyBlue3        74  #5fafd7 
+" DarkRed         88  #87005f
+" Grey53          102 #878787 
+" LightSlateGrey  103 #8787af 
+" DarkSeaGreen    108 #87af87 
+" RosyBrown       138 #af8787 
+" DarkSeaGreen3   150 #afd787 
+" HotPink2        169 #d75faf
+" LightGoldenrod2 221 #ffd75f 
+" Cornsilk1       230 #ffffd7 
+
+" Grey Index
+
+" Grey100         231 #ffffff 
+" Grey7           233 #121212
+" Grey11          234 #1c1c1c
+" Grey19          236 #303030
+" Grey23          237 #3a3a3a
+" Grey27          238 #444444
+" Grey42          242 #6c6c6c 
+" Grey58          246 #949494 
+" Grey74          250 #bcbcbc 
 
 hi clear
 if exists("syntax_on")
@@ -34,22 +56,22 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
   hi Normal                         ctermfg=230   ctermbg=233   cterm=NONE            guifg=#ffffd7 guibg=#121212 gui=NONE
   hi Terminal                       ctermfg=230   ctermbg=233   cterm=NONE            guifg=#ffffd7 guibg=#121212 gui=NONE
-  hi Visual                         ctermfg=NONE  ctermbg=244   cterm=NONE            guifg=NONE    guibg=#808080 gui=NONE
-  hi Constant                       ctermfg=138   ctermbg=NONE  cterm=NONE            guifg=#af8787 guibg=NONE    gui=NONE
+  hi Visual                         ctermfg=NONE  ctermbg=238   cterm=NONE            guifg=NONE    guibg=#444444 gui=NONE
 
   set background=dark
 
+  hi Constant                       ctermfg=138   ctermbg=NONE  cterm=NONE            guifg=#af8787 guibg=NONE    gui=NONE
   hi Search                         ctermfg=NONE  ctermbg=16    cterm=NONE            guifg=NONE    guibg=#000000 gui=NONE
-  hi IncSearch                      ctermfg=NONE  ctermbg=237   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
+  hi IncSearch                      ctermfg=NONE  ctermbg=236   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
   hi CurSearch                      ctermfg=NONE  ctermbg=236   cterm=NONE            guifg=NONE    guibg=#303030 gui=NONE
-  hi WildMenu                       ctermfg=NONE  ctermbg=237   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
-  hi Cursor                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#d75faf gui=NONE
+  hi WildMenu                       ctermfg=NONE  ctermbg=236   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
+  hi Cursor                         ctermfg=NONE  ctermbg=169   cterm=NONE            guifg=NONE    guibg=#d75faf gui=NONE
   hi Special                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
   hi Comment                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
-  hi StatusLine                     ctermfg=234   ctermbg=251   cterm=NONE            guifg=#1c1c1c guibg=#c6c6c6 gui=NONE
-  hi StatusLineNC                   ctermfg=251   ctermbg=234   cterm=NONE            guifg=#c6c6c6 guibg=#1c1c1c gui=NONE
-  hi StatusLineTerm                 ctermfg=234   ctermbg=251   cterm=NONE            guifg=#c6c6c6 guibg=#1c1c1c gui=NONE
-  hi StatusLineTermNC               ctermfg=234   ctermbg=251   cterm=NONE            guifg=#c6c6c6 guibg=#1c1c1c gui=NONE
+  hi StatusLine                     ctermfg=234   ctermbg=246   cterm=NONE            guifg=#1c1c1c guibg=#949494 gui=NONE
+  hi StatusLineNC                   ctermfg=246   ctermbg=234   cterm=NONE            guifg=#949494 guibg=#1c1c1c gui=NONE
+  hi StatusLineTerm                 ctermfg=234   ctermbg=246   cterm=NONE            guifg=#1c1c1c guibg=#949494 gui=NONE
+  hi StatusLineTermNC               ctermfg=234   ctermbg=246   cterm=NONE            guifg=#1c1c1c guibg=#949494 gui=NONE
   hi Statement                      ctermfg=74    ctermbg=NONE  cterm=NONE            guifg=#5fafd7 guibg=NONE    gui=NONE
   hi Type                           ctermfg=30    ctermbg=NONE  cterm=NONE            guifg=#008787 guibg=NONE    gui=NONE
   hi LineNr                         ctermfg=242   ctermbg=NONE  cterm=NONE            guifg=#6c6c6c guibg=NONE    gui=NONE
@@ -75,9 +97,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi VertSplit                      ctermfg=250   ctermbg=237   cterm=NONE            guifg=#bcbcbc guibg=#3a3a3a gui=NONE
   hi Folded                         ctermfg=250   ctermbg=237   cterm=NONE            guifg=#bcbcbc guibg=#3a3a3a gui=NONE
   hi FoldColumn                     ctermfg=250   ctermbg=237   cterm=NONE            guifg=#bcbcbc guibg=#3a3a3a gui=NONE
-  hi CursorLineFold                 ctermfg=251   ctermbg=238   cterm=NONE            guifg=#c6c6c6 guibg=#444444 gui=NONE
+  hi CursorLineFold                 ctermfg=246   ctermbg=238   cterm=NONE            guifg=#949494 guibg=#444444 gui=NONE
   hi SignColumn                     ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi MatchParen                     ctermfg=NONE  ctermbg=240   cterm=NONE            guifg=NONE    guibg=#585858 gui=NONE
+  hi MatchParen                     ctermfg=NONE  ctermbg=238   cterm=NONE            guifg=NONE    guibg=#444444 gui=NONE
   hi ModeMsg                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
   hi MoreMsg                        ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi NonText                        ctermfg=250   ctermbg=237   cterm=NONE            guifg=#bcbcbc guibg=#3a3a3a gui=NONE
@@ -115,15 +137,15 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
 " Markdown
 
-  hi markdownHeadingDelimiter       ctermfg=23  ctermbg=NONE term=NONE                guifg=#005f87 guibg=NONE    gui=NONE
-  hi MarkdownItalic                 ctermfg=23  ctermbg=NONE term=NONE                guifg=#005f5f guibg=NONE    gui=NONE  
-  hi markdownItalicDelimiter        ctermfg=23  ctermbg=NONE term=NONE                guifg=#005f5f guibg=NONE    gui=NONE  
-  hi markdownBold                   ctermfg=24  ctermbg=NONE term=NONE                guifg=#005f87 guibg=NONE    gui=NONE
-  hi markdownBoldDelimiter          ctermfg=24  ctermbg=NONE term=NONE                guifg=#005f87 guibg=NONE    gui=NONE
-  hi markdownBoldItalic             ctermfg=24  ctermbg=NONE term=bold                guifg=#005f87 guibg=NONE    gui=bold
-  hi markdownBoldItalicDelimiter    ctermfg=24  ctermbg=NONE term=bold                guifg=#005f87 guibg=NONE    gui=bold
-  hi markdownCode                   ctermfg=102 ctermbg=NONE term=NONE                guifg=#878787 guibg=NONE    gui=NONE
-  hi markdownBlockquote             ctermfg=23  ctermbg=NONE term=NONE                guifg=#005f87 guibg=NONE    gui=NONE
+  hi markdownHeadingDelimiter       ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f5f guibg=NONE    gui=NONE
+  hi MarkdownItalic                 ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f5f guibg=NONE    gui=NONE  
+  hi markdownItalicDelimiter        ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f5f guibg=NONE    gui=NONE  
+  hi markdownBold                   ctermfg=24    ctermbg=NONE  term=NONE             guifg=#005f87 guibg=NONE    gui=NONE
+  hi markdownBoldDelimiter          ctermfg=24    ctermbg=NONE  term=NONE             guifg=#005f87 guibg=NONE    gui=NONE
+  hi markdownBoldItalic             ctermfg=24    ctermbg=NONE  term=bold             guifg=#005f87 guibg=NONE    gui=bold
+  hi markdownBoldItalicDelimiter    ctermfg=24    ctermbg=NONE  term=bold             guifg=#005f87 guibg=NONE    gui=bold
+  hi markdownCode                   ctermfg=102   ctermbg=NONE  term=NONE             guifg=#878787 guibg=NONE    gui=NONE
+  hi markdownBlockquote             ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f87 guibg=NONE    gui=NONE
 
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
@@ -138,8 +160,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set t_Co=16
 
-  hi Normal             ctermbg=NONE        ctermfg=white       cterm=NONE
-  hi Terminal           ctermbg=NONE        ctermfg=white       cterm=NONE
+  hi Normal                         ctermbg=NONE  ctermfg=white     cterm=NONE
+  hi Terminal                       ctermbg=NONE  ctermfg=white     cterm=NONE
 
   set background=dark
 
