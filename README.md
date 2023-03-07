@@ -9,6 +9,6 @@ The goal was to end up with something similar to apprentice, with a slightly hig
 
 It also explicitly sets a few extra markdown options.
 
-![image](assets/screenshot_md.png)
+![image](assets/markdownscreenshot.png)
 
 
