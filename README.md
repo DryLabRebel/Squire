@@ -1,7 +1,7 @@
 Squire
 ======
 
-A dark, medium-contrast colorscheme for vim, inspired by one of the best colorschemes: Apprentice, by Romain Lafourcade.
+A dark, medium-contrast colorscheme for vim, inspired by favourite colorscheme: `apprentice`, by Romain Lafourcade.
 
 The pallette is heavy on low contrast blues and greens, with some yellow and purple, and off-white text.
 

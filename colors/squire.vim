@@ -9,20 +9,21 @@
 " background, for working in more well lit environments
 
 " To Do:
+" Make the background, just a speck lighter
 " - Set the 8-16 bit colour pallette
 
 " Colour pallette
 
-" White           15  #ffffff 
+" White           15  #eeeeee 
 " Black           16  #000000
-" DeepSkyBlue4    23  #005f5f 
-" DeepSkyBlue4    24  #005f87 
+" DeepSkyBlue4    67  #5f87af 
+" DeepSkyBlue4    74  #5fafd7 
 " Turquoise4      30  #008787 
 " PaleTurquoise4  66  #5f8787 
 " SteelBlue       67  #5f87af 
 " SkyBlue3        74  #5fafd7 
 " DarkRed         88  #87005f
-" Grey53          102 #878787 
+" Grey53          188 #afafaf 
 " LightSlateGrey  103 #8787af 
 " DarkSeaGreen    108 #87af87 
 " RosyBrown       138 #af8787 
@@ -33,7 +34,7 @@
 
 " Grey Index
 
-" Grey100         231 #ffffff 
+" Grey100         255 #eeeeee 
 " Grey7           233 #121212
 " Grey11          234 #1c1c1c
 " Grey19          236 #303030
@@ -54,8 +55,7 @@ let g:colors_name = "squire"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
-  hi Normal                         ctermfg=230   ctermbg=233   cterm=NONE            guifg=#ffffd7 guibg=#121212 gui=NONE
-  hi Terminal                       ctermfg=230   ctermbg=233   cterm=NONE            guifg=#ffffd7 guibg=#121212 gui=NONE
+  hi Normal                         ctermfg=230   ctermbg=234   cterm=NONE            guifg=#ffffd7 guibg=#1c1c1c gui=NONE
   hi Visual                         ctermfg=NONE  ctermbg=238   cterm=NONE            guifg=NONE    guibg=#444444 gui=NONE
 
   set background=dark
@@ -80,7 +80,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi CursorLineNr                   ctermfg=250   ctermbg=NONE  cterm=NONE            guifg=#bcbcbc guibg=NONE    gui=NONE
   hi CursorLineSign                 ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi String                         ctermfg=150   ctermbg=NONE  cterm=NONE            guifg=#afd787 guibg=NONE    gui=NONE 
-  hi ErrorMsg                       ctermfg=15    ctermbg=88    cterm=NONE            guifg=#ffffff guibg=#87005f gui=NONE 
+  hi ErrorMsg                       ctermfg=15    ctermbg=88    cterm=NONE            guifg=#eeeeee guibg=#87005f gui=NONE 
   hi WarningMsg                     ctermfg=221   ctermbg=88    cterm=NONE            guifg=#ffd75f guibg=#87005f gui=NONE 
   hi ColorColumn                    ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi Conceal                        ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
@@ -121,7 +121,11 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi MoreMsg                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
   hi Function                       ctermfg=103   ctermbg=NONE  cterm=NONE            guifg=#8787af guibg=NONE    gui=NONE
   hi Identifier                     ctermfg=67    ctermbg=NONE  cterm=NONE            guifg=#5f87af guibg=NONE    gui=NONE
-  hi Title                          ctermfg=231   ctermbg=NONE  cterm=bold            guifg=#ffffff guibg=NONE    gui=bold
+  hi Title                          ctermfg=255   ctermbg=NONE  cterm=bold            guifg=#eeeeee guibg=NONE    gui=bold
+
+  hi! link Terminal Normal
+
+  hi! link Operator Statement
 
   hi! link Number Constant
   hi! link Float Constant
@@ -137,22 +141,23 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
 " Markdown
 
-  hi markdownHeadingDelimiter       ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f5f guibg=NONE    gui=NONE
-  hi MarkdownItalic                 ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f5f guibg=NONE    gui=NONE  
-  hi markdownItalicDelimiter        ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f5f guibg=NONE    gui=NONE  
-  hi markdownBold                   ctermfg=24    ctermbg=NONE  term=NONE             guifg=#005f87 guibg=NONE    gui=NONE
-  hi markdownBoldDelimiter          ctermfg=24    ctermbg=NONE  term=NONE             guifg=#005f87 guibg=NONE    gui=NONE
-  hi markdownBoldItalic             ctermfg=24    ctermbg=NONE  term=bold             guifg=#005f87 guibg=NONE    gui=bold
-  hi markdownBoldItalicDelimiter    ctermfg=24    ctermbg=NONE  term=bold             guifg=#005f87 guibg=NONE    gui=bold
-  hi markdownCode                   ctermfg=102   ctermbg=NONE  term=NONE             guifg=#878787 guibg=NONE    gui=NONE
-  hi markdownBlockquote             ctermfg=23    ctermbg=NONE  term=NONE             guifg=#005f87 guibg=NONE    gui=NONE
+  hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  term=NONE             guifg=#5f87af guibg=NONE    gui=NONE
+  hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  term=NONE             guifg=#5f87af guibg=NONE    gui=NONE  
+  hi markdownBold                   ctermfg=74    ctermbg=NONE  term=NONE             guifg=#5fafd7 guibg=NONE    gui=NONE
+  hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  term=bold             guifg=#5fafd7 guibg=NONE    gui=bold
+  hi markdownCode                   ctermfg=145   ctermbg=NONE  term=NONE             guifg=#afafaf guibg=NONE    gui=NONE
+  hi markdownBlockquote             ctermfg=67    ctermbg=NONE  term=NONE             guifg=#5f87af guibg=NONE    gui=NONE
+
+  hi! link markdownItalicDelimiter markdownItalic
+  hi! link markdownBoldDelimiter markdownBold
+  hi! link markdownBoldItalicDelimiter markdownBoldItalic
 
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
 
-" markdownAutomaticLink  markdownCodeDelimiter  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
+" markdownAutomaticLink  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
 
-  " markdownHeadingRule  markdownId
+" markdownHeadingRule  markdownId
 " markdownIdDeclaration  markdownIdDelimiter  markdownLinkText  markdownListMarker  markdownOrderedListMarker  markdownRule  markdownStrike  markdownStrikeDelimiter  markdownUrl
 " markdownUrlDelimiter  markdownUrlTitle  markdownUrlTitleDelimiter
 
