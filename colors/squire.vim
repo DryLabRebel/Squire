@@ -1,6 +1,6 @@
 " Name: squire
 " Maintainer: Geoff English <geoff_anthony@hotmail.com>
-" Last Updated: (07-03-2023)
+" Last Updated: (09-03-2023)
 " Website:      https://github.com/DryLabRebel/Squire
 " License:      MIT
 
@@ -142,7 +142,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 " Markdown
 
   hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  term=NONE             guifg=#5f87af guibg=NONE    gui=NONE
-  hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  term=NONE             guifg=#5f87af guibg=NONE    gui=NONE  
+  hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  term=italic           guifg=#5f87af guibg=NONE    gui=italic
   hi markdownBold                   ctermfg=74    ctermbg=NONE  term=NONE             guifg=#5fafd7 guibg=NONE    gui=NONE
   hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  term=bold             guifg=#5fafd7 guibg=NONE    gui=bold
   hi markdownCode                   ctermfg=145   ctermbg=NONE  term=NONE             guifg=#afafaf guibg=NONE    gui=NONE
