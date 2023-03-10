@@ -125,13 +125,12 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi Identifier                     ctermfg=67    ctermbg=NONE  cterm=NONE            guifg=#5f87af guibg=NONE    gui=NONE
   hi Title                          ctermfg=255   ctermbg=NONE  cterm=bold            guifg=#eeeeee guibg=NONE    gui=bold
 
-  hi PreProc                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
-  hi Define                         ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
-  hi Include                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
-  hi Macro                          ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
-  hi PreCondit                      ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
-
   hi! link Terminal Normal
+  hi! link PreProc Special
+  hi! link Define Special
+  hi! link Include Special
+  hi! link Macro Special
+  hi! link PreCondit Special
   hi! link Operator Statement
   hi! link Number Constant
   hi! link Character Constant
@@ -145,24 +144,16 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 " Markdown
 
   hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
-
   hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
-
   hi markdownBold                   ctermfg=74    ctermbg=NONE  cterm=NONE             guifg=#5fafd7 guibg=NONE    gui=NONE
-
   hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  cterm=bold             guifg=#5fafd7 guibg=NONE    gui=bold
-
   hi markdownCode                   ctermfg=145   ctermbg=NONE  cterm=NONE             guifg=#afafaf guibg=NONE    gui=NONE
   hi markdownBlockquote             ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
 
   hi! link markdownHeadingRule markdownHeadingDelimiter
-
   hi! link markdownItalicDelimiter markdownItalic
-
   hi! link markdownBoldDelimiter markdownBold
-
   hi! link markdownBoldItalicDelimiter markdownBoldItalic
-
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
 
