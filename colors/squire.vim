@@ -9,6 +9,13 @@
 " background, for working in more well lit environments
 
 " To Do:
+" A WAY OF MUCH MORE QUICKLY MODIFYING AND QUICKLY INSPECTING A HIGHLIGHT " GROUP!!
+" - Being able to quickly apply the changes and view several files at once
+"   - Have a vim session dedicated to testing
+"   - Have multiple windows open with multiple buffers at once
+"   - Create a mapping/macro which quickly applies a colour change, then saves it, and sources it
+"     - I want to be able to save a 256 colour code in a register, then apply
+"       a macro to it which updates the hash colour, saves and sources the colourscheme
 " Work through the md hi options and figure out what each one does!
 " Figure which (if any) option specifically highlights high level markdown one and two headings
 " Else, find a colour which hamonizes between markdown H1 headings, and other languages
@@ -125,37 +132,39 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi PreCondit                      ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
 
   hi! link Terminal Normal
-
   hi! link Operator Statement
-
   hi! link Number Constant
   hi! link Character Constant
   hi! link Float Constant
   hi! link Boolean Constant
-
   hi! link StorageClass Type
   hi! link Structure Type
   hi! link Typedef Type
-
   hi! link htmlLink Function
 
 " Markdown
 
   hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
+
   hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
+
   hi markdownBold                   ctermfg=74    ctermbg=NONE  cterm=NONE             guifg=#5fafd7 guibg=NONE    gui=NONE
+
   hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  cterm=bold             guifg=#5fafd7 guibg=NONE    gui=bold
+
   hi markdownCode                   ctermfg=145   ctermbg=NONE  cterm=NONE             guifg=#afafaf guibg=NONE    gui=NONE
   hi markdownBlockquote             ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
 
+  hi! link markdownHeadingRule markdownHeadingDelimiter
+
   hi! link markdownItalicDelimiter markdownItalic
+
   hi! link markdownBoldDelimiter markdownBold
+
   hi! link markdownBoldItalicDelimiter markdownBoldItalic
 
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
-
-  hi markdownAutomaticLink       ctermfg=13    ctermbg=NONE  cterm=NONE             guifg=#ff00ff guibg=NONE    gui=NONE
 
 " markdownAutomaticLink  markdownError  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
 
