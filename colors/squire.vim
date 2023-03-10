@@ -9,23 +9,13 @@
 " background, for working in more well lit environments
 
 " To Do:
-" A WAY OF MUCH MORE QUICKLY MODIFYING AND QUICKLY INSPECTING A HIGHLIGHT " GROUP!!
-" - Being able to quickly apply the changes and view several files at once
-"   - Have a vim session dedicated to testing
-"   - Have multiple windows open with multiple buffers at once
-"   - Create a mapping/macro which quickly applies a colour change, then saves it, and sources it
-"     - I want to be able to save a 256 colour code in a register, then apply
-"       a macro to it which updates the hash colour, saves and sources the colourscheme
 " Work through the md hi options and figure out what each one does!
-" Figure which (if any) option specifically highlights high level markdown one and two headings
-" Else, find a colour which hamonizes between markdown H1 headings, and other languages
-" Changed the font -- Bold, still isn't bold -- even though Headings are now bold!! Gah!
-" Set the 8-16 bit colour pallette
+" Add a screenshot to the README for python/R/c something else
+" Finalize your colour palette
+" Update the colour palette list
+" Set the 8-16 bit colour palette
 
-" - UNLINK: Italics, from delimiters!
-" Renew the colour pallette
-
-" Colour pallette
+" Colour palette
 
 " 15
 " 30
