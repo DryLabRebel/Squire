@@ -9,7 +9,6 @@
 " background, for working in more well lit environments
 
 " To Do:
-" Work through the md hi options and figure out what each one does!
 " Add a screenshot to the README for python/R/c something else
 " Finalize your colour palette
 " Update the colour palette list
@@ -121,41 +120,50 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi! link Include Special
   hi! link Macro Special
   hi! link PreCondit Special
+  hi! link markdownAutomaticLink Constant
+  hi! link markdownEscape Special
   hi! link Operator Statement
   hi! link Number Constant
   hi! link Character Constant
   hi! link Float Constant
   hi! link Boolean Constant
+  hi! link markdownUrl Constant
+  hi! link markdownUrlTitleDelimiter Type
   hi! link StorageClass Type
   hi! link Structure Type
   hi! link Typedef Type
-  hi! link htmlLink Function
+  hi! link htmlLink Type
+  hi! link markdownIdDeclaration Type
+  hi! link markdownLinkText Function
+  hi! link markdownFootnote Function
+  hi! link markdownFootnoteDefinition Function
   hi! link MoreMsg Comment
   hi! link ModeMsg Comment
+  hi! link markdownUrlTitle String
+  hi! link markdownIdDelimiter Title
 
 " Markdown
 
-  hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
-
-  hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE    gui=NONE
-  hi markdownBold                   ctermfg=74    ctermbg=NONE  cterm=NONE             guifg=#5fafd7 guibg=NONE    gui=NONE
-  hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  cterm=bold             guifg=#5fafd7 guibg=NONE    gui=bold
-  hi markdownCode                   ctermfg=145   ctermbg=NONE  cterm=NONE             guifg=#afafaf guibg=NONE    gui=NONE
+  hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE       gui=NONE
+  hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE       gui=NONE
+  hi markdownBold                   ctermfg=74    ctermbg=NONE  cterm=NONE             guifg=#5fafd7 guibg=NONE       gui=NONE
+  hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  cterm=bold             guifg=#5fafd7 guibg=NONE       gui=bold
+  hi markdownCode                   ctermfg=145   ctermbg=NONE  cterm=NONE             guifg=#afafaf guibg=NONE       gui=NONE
+  hi markdownRule                   ctermfg=74    ctermbg=NONE  cterm=NONE             guifg=#5fafd7 guibg=NONE       gui=NONE
 
   hi! link markdownHeadingRule markdownHeadingDelimiter
   hi! link markdownBlockquote markdownHeadingDelimiter
+  hi! link markdownListMarker markdownHeadingDelimiter
+  hi! link markdownOrderedListMarker markdownHeadingDelimiter
   hi! link markdownItalicDelimiter markdownItalic
+  hi! link markdownStrike markdownItalic
+  hi! link markdownStrikeDelimiter markdownItalic
   hi! link markdownBoldDelimiter markdownBold
+  hi! link markdownId markdownBold
+  hi! link markdownUrlDelimiter markdownBold
   hi! link markdownBoldItalicDelimiter markdownBoldItalic
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
-
-" markdownAutomaticLink  markdownEscape  markdownFootnote  markdownFootnoteDefinition  
-
-" markdownHeadingRule  markdownId
-" markdownIdDeclaration  markdownIdDelimiter  markdownLinkText  markdownListMarker  markdownOrderedListMarker  markdownRule  markdownStrike  markdownStrikeDelimiter  markdownUrl
-" markdownUrlDelimiter  markdownUrlTitle  markdownUrlTitleDelimiter
-
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set t_Co=16
