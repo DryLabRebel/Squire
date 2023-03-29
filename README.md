@@ -9,7 +9,7 @@ It also explicitly sets a few extra markdown options.
 
 The colour palette is taken from the xterm colour palette to ensure consistency across 256 and higher colour environments.
 
-Here's some markdown in terminal MacVim:
+Here is some Markdown in terminal MacVim:
 
 ![image](assets/markdownscreenshot.png)
 
