@@ -3,7 +3,7 @@ Squire
 
 A dark, medium-contrast colorscheme for vim, inspired by my (other) favourite colorscheme: [`apprentice`](https://github.com/romainl/Apprentice), by Romain Lafourcade.
 
-This colorscheme is a slight higher contrast, for ease of viewing when there is more surrounding light, or some glare.
+This colorscheme is a slightly higher contrast, for ease of viewing when there is more surrounding light, or some glare.
 
 It also explicitly sets a few extra markdown options.
 
