@@ -51,10 +51,14 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi MoreMsg                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
   hi Function                       ctermfg=103   ctermbg=NONE  cterm=NONE            guifg=#8787af guibg=NONE    gui=NONE
   hi Identifier                     ctermfg=67    ctermbg=NONE  cterm=NONE            guifg=#5f87af guibg=NONE    gui=NONE
+  " Why doesn't this 'Tag' work?
+  hi Tag                            ctermfg=67    ctermbg=NONE  cterm=underline       guifg=#5f87af guibg=NONE    gui=underline
   hi Title                          ctermfg=255   ctermbg=NONE  cterm=bold            guifg=#eeeeee guibg=NONE    gui=bold
   hi TabLineSel                     ctermfg=230   ctermbg=237   cterm=NONE            guifg=#ffffd7 guibg=#444444 gui=NONE
   hi TabLine                        ctermfg=244   ctermbg=237   cterm=NONE            guifg=#808080 guibg=#444444 gui=NONE
   hi Delimiter                      ctermfg=67    ctermbg=NONE  cterm=NONE            guifg=#5f87af guibg=NONE    gui=NONE
+  hi Ignore                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
+  hi Underlined                     ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
 
 " Not yet assigned
 
@@ -76,15 +80,6 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi SpecialKey                     ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi VisualNOS                      ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
 
-  hi Conditional                    ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Debug                          ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Exception                      ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Ignore                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Label                          ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Repeat                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi SpecialChar                    ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Tag                            ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
-  hi Underlined                     ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi Menu                           ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi MessageWindow                  ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi Scrollbar                      ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
@@ -94,18 +89,22 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
 
   hi! link Boolean Constant
   hi! link Character Constant
+  hi! link Conditional Statement
   hi! link CurSearch IncSearch
   hi! link CursorLineNr LineNrAbove
   hi! link CursorLineSign VertSplit
+  hi! link Debug Special
   hi! link Define Special
   hi! link Directory Type
   hi! link ErrorMsg Error
+  hi! link Exception Special
   hi! link Float Constant
   hi! link FoldColumn VertSplit
   hi! link Folded VertSplit
   hi! link HtmlLink Type
   hi! link Include Special
   hi! link Keyword Function
+  hi! link Label Statement
   hi! link LineNrBelow LineNrAbove
   hi! link Macro Special
   hi! link MoreMsg Comment
@@ -115,6 +114,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi! link Operator Statement
   hi! link PreProc Special
   hi! link PreCondit Special
+  hi! link Repeat Statement
+  hi! link SpecialChar String
   hi! link SpecialComment Special
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLine
@@ -165,15 +166,3 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set background=dark
 
 endif
-
-" Conditional		if, then, else, endif, switch, etc.
-" Repeat		for, do, while, etc.
-" Label			case, default, etc.
-" Exception		try, catch, throw
-" SpecialChar		special character in a constant
-" Tag			you can use CTRL-] on this
-" Debug			debugging statements
-" Underlined		text that stands out, HTML links
-" Ignore		left blank, hidden  |hl-Ignore|
-" Todo			anything that needs extra attention; mostly the
-" 			keywords TODO FIXME and XXX
