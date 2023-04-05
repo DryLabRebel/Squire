@@ -1,12 +1,13 @@
 " Name: squire
 " Maintainer: Geoff English <geoff_anthony@hotmail.com>
-" Last Updated: (29-03-2023)
+" Last Updated: (06-04-2023)
 " Website:      https://github.com/DryLabRebel/Squire
 " License:      MIT
 
 " Inspired by apprentice, it explicitly sets a few extra
 " options in markdown, and has a slightly higher contrast against the
 " background, for working in more well lit environments
+" Also apparently becoming a lot more generally green/blue ⎺\_(⍨)_/⎺
 
 hi clear
 if exists("syntax_on")
@@ -29,9 +30,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi Cursor                         ctermfg=NONE  ctermbg=169   cterm=NONE            guifg=NONE    guibg=#d75faf gui=NONE
   hi Special                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
   hi Comment                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
-  hi StatusLine                     ctermfg=234   ctermbg=246   cterm=NONE            guifg=#1c1c1c guibg=#949494 gui=NONE
-  hi StatusLineNC                   ctermfg=246   ctermbg=234   cterm=NONE            guifg=#949494 guibg=#1c1c1c gui=NONE
-  hi Statement                      ctermfg=74    ctermbg=NONE  cterm=NONE            guifg=#5fafd7 guibg=NONE    gui=NONE
+  hi StatusLine                     ctermfg=232   ctermbg=65    cterm=NONE            guifg=#080808 guibg=#5f875f gui=NONE
+  hi StatusLineNC                   ctermfg=65    ctermbg=232   cterm=NONE            guifg=#5f875f guibg=#080808 gui=NONE
+  hi Statement                      ctermfg=110   ctermbg=NONE  cterm=NONE            guifg=#87afd7 guibg=NONE    gui=NONE
   hi Type                           ctermfg=73    ctermbg=NONE  cterm=NONE            guifg=#5fafaf guibg=NONE    gui=NONE
   hi LineNr                         ctermfg=242   ctermbg=NONE  cterm=NONE            guifg=#6c6c6c guibg=NONE    gui=NONE
   hi LineNrAbove                    ctermfg=250   ctermbg=NONE  cterm=NONE            guifg=#bcbcbc guibg=NONE    gui=NONE
@@ -48,9 +49,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi SpellCap                       ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
   hi SpellLocal                     ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
   hi SpellRare                      ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
-  hi MoreMsg                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
   hi Function                       ctermfg=103   ctermbg=NONE  cterm=NONE            guifg=#8787af guibg=NONE    gui=NONE
-  hi Identifier                     ctermfg=67    ctermbg=NONE  cterm=NONE            guifg=#5f87af guibg=NONE    gui=NONE
+
   " Why doesn't this 'Tag' work?
   hi Tag                            ctermfg=67    ctermbg=NONE  cterm=underline       guifg=#5f87af guibg=NONE    gui=underline
   hi Title                          ctermfg=255   ctermbg=NONE  cterm=bold            guifg=#eeeeee guibg=NONE    gui=bold
@@ -102,6 +102,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi! link FoldColumn VertSplit
   hi! link Folded VertSplit
   hi! link HtmlLink Type
+  hi! link Identifier Function
   hi! link Include Special
   hi! link Keyword Function
   hi! link Label Statement
