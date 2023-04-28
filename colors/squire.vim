@@ -30,7 +30,7 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi IncSearch                      ctermfg=NONE  ctermbg=237   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
   hi Cursor                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#d75faf gui=NONE
   hi lCursor                        ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#af5fd7 gui=NONE
-  hi Special                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
+  hi Special                        ctermfg=151   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
   hi Comment                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
   hi StatusLine                     ctermfg=233   ctermbg=108   cterm=NONE            guifg=#080808 guibg=#87af87 gui=NONE
   hi StatusLineNC                   ctermfg=108   ctermbg=233   cterm=NONE            guifg=#87af87 guibg=#080808 gui=NONE
@@ -38,7 +38,7 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi Type                           ctermfg=73    ctermbg=NONE  cterm=NONE            guifg=#5fafaf guibg=NONE    gui=NONE
   hi LineNr                         ctermfg=242   ctermbg=NONE  cterm=NONE            guifg=#6c6c6c guibg=NONE    gui=NONE
   hi LineNrAbove                    ctermfg=250   ctermbg=NONE  cterm=NONE            guifg=#bcbcbc guibg=NONE    gui=NONE
-  hi String                         ctermfg=151   ctermbg=NONE  cterm=NONE            guifg=#afd787 guibg=NONE    gui=NONE 
+  hi String                         ctermfg=186   ctermbg=NONE  cterm=NONE            guifg=#afd787 guibg=NONE    gui=NONE 
   hi CursorLine                     ctermfg=NONE  ctermbg=233   cterm=NONE            guifg=NONE    guibg=#080808 gui=NONE
   hi Error			    ctermfg=230   ctermbg=88    cterm=NONE            guifg=#ffffd7 guibg=#870000 gui=NONE 
   hi WarningMsg                     ctermfg=221   ctermbg=88    cterm=NONE            guifg=#ffd75f guibg=#870000 gui=NONE 
@@ -46,7 +46,7 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi EndOfBuffer                    ctermfg=250   ctermbg=234   cterm=NONE            guifg=#bcbcbc guibg=#1c1c1c gui=NONE
   hi CursorLineFold                 ctermfg=246   ctermbg=237   cterm=NONE            guifg=#949494 guibg=#3a3a3a gui=NONE
   hi MatchParen                     ctermfg=NONE  ctermbg=237   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
-  hi Function                       ctermfg=102    ctermbg=NONE  cterm=NONE            guifg=#af87af guibg=NONE    gui=NONE
+  hi Function                       ctermfg=139   ctermbg=NONE  cterm=NONE            guifg=#af87af guibg=NONE    gui=NONE
   hi DiffAdd                        ctermfg=232   ctermbg=65    cterm=NONE            guifg=#080808 guibg=#87af87 gui=NONE
   hi DiffChange                     ctermfg=232   ctermbg=229   cterm=NONE            guifg=#080808 guibg=#ffffaf gui=NONE
   hi DiffText                       ctermfg=229   ctermbg=NONE  cterm=NONE            guifg=#ffffaf guibg=NONE    gui=NONE
@@ -129,9 +129,9 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE       gui=NONE
   hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE       gui=NONE
   hi markdownBold                   ctermfg=67    ctermbg=NONE  cterm=bold             guifg=#5f87af guibg=NONE       gui=bold
-  hi markdownBoldItalic             ctermfg=74    ctermbg=NONE  cterm=bold             guifg=#87afd7 guibg=NONE       gui=bold
+  hi markdownBoldItalic             ctermfg=110   ctermbg=NONE  cterm=bold             guifg=#87afd7 guibg=NONE       gui=bold
   hi markdownCode                   ctermfg=244   ctermbg=NONE  cterm=NONE             guifg=#808080 guibg=NONE       gui=NONE
-  hi markdownRule                   ctermfg=74    ctermbg=NONE  cterm=NONE             guifg=#5fafd7 guibg=NONE       gui=NONE
+  hi markdownRule                   ctermfg=110   ctermbg=NONE  cterm=NONE             guifg=#87afd7 guibg=NONE       gui=NONE
 
   hi! link markdownHeadingRule markdownHeadingDelimiter
   hi! link markdownBlockquote markdownHeadingDelimiter
@@ -177,7 +177,6 @@ endif
 " 66   PaleTurquoise4   #5f8787  rgb(95,135,135)   hsl(180,17%,45%)
 " 67   SteelBlue        #5f87af  rgb(95,135,175)   hsl(210,33%,52%)
 " 73   CadetBlue        #5fafaf  rgb(95,175,175)   hsl(180,33%,52%)
-" 74   SkyBlue3         #5fafd7  rgb(95,175,215)   hsl(200,60%,60%)
 " 88   DarkRed          #870000  rgb(135,0,0)      hsl(0,100%,26%)
 " 139  Grey63           #af87af  rgb(175,135,175)  hsl(300,20%,60%)
 " 108  DarkSeaGreen     #87af87  rgb(135,175,135)  hsl(120,20%,60%)
