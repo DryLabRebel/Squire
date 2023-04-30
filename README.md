@@ -17,7 +17,7 @@ Here's a few other examples in a multiwindow shot in terminal MacVim:
 
 ![image](assets/multi_window_screenshot.png)
 
-Here is a graphic with full colour palette:
+Here is the full colour palette:
 
 - The background of the image is the background of the colorscheme (Grey11, xterm: 234, hex: #1c1c1c)
 - The pink (MediumOrchid, xterm: 134, hex: #af5fd7) is the cursor colour, which is intentionally distinctive
