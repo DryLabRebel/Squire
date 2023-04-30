@@ -1,6 +1,6 @@
 " Name: squire
 " Maintainer: Geoff English <geoff_anthony@hotmail.com>
-" Last Update: 20-04-2023 "(Remember <leader>mdu to set latest update!!)
+" Last Update: 01-05-2023
 " Website:      https://github.com/DryLabRebel/Squire
 " License:      MIT
 
@@ -30,24 +30,24 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi IncSearch                      ctermfg=NONE  ctermbg=237   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
   hi Cursor                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#d75faf gui=NONE
   hi lCursor                        ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#af5fd7 gui=NONE
-  hi Special                        ctermfg=151   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
+  hi Special                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
   hi Comment                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
-  hi StatusLine                     ctermfg=233   ctermbg=108   cterm=NONE            guifg=#080808 guibg=#87af87 gui=NONE
-  hi StatusLineNC                   ctermfg=108   ctermbg=233   cterm=NONE            guifg=#87af87 guibg=#080808 gui=NONE
-  hi Statement                      ctermfg=110   ctermbg=NONE  cterm=NONE            guifg=#87afd7 guibg=NONE    gui=NONE
-  hi Type                           ctermfg=73    ctermbg=NONE  cterm=NONE            guifg=#5fafaf guibg=NONE    gui=NONE
-  hi LineNr                         ctermfg=242   ctermbg=NONE  cterm=NONE            guifg=#6c6c6c guibg=NONE    gui=NONE
-  hi LineNrAbove                    ctermfg=250   ctermbg=NONE  cterm=NONE            guifg=#bcbcbc guibg=NONE    gui=NONE
-  hi String                         ctermfg=186   ctermbg=NONE  cterm=NONE            guifg=#afd787 guibg=NONE    gui=NONE 
-  hi CursorLine                     ctermfg=NONE  ctermbg=233   cterm=NONE            guifg=NONE    guibg=#080808 gui=NONE
-  hi Error			    ctermfg=230   ctermbg=88    cterm=NONE            guifg=#ffffd7 guibg=#870000 gui=NONE 
+  hi StatusLine                     ctermfg=233   ctermbg=187   cterm=NONE            guifg=#121212 guibg=#d7d7af gui=NONE
+  hi StatusLineNC                   ctermfg=187   ctermbg=233   cterm=NONE            guifg=#d7d7af guibg=#121212 gui=NONE
+  hi Statement                      ctermfg=102   ctermbg=NONE  cterm=NONE            guifg=#878787 guibg=NONE    gui=NONE
+  hi Type                           ctermfg=181   ctermbg=NONE  cterm=NONE            guifg=#d7afaf guibg=NONE    gui=NONE
+  hi LineNr                         ctermfg=243   ctermbg=NONE  cterm=NONE            guifg=#767676 guibg=NONE    gui=NONE
+  hi LineNrAbove                    ctermfg=251   ctermbg=NONE  cterm=NONE            guifg=#c6c6c6 guibg=NONE    gui=NONE
+  hi String                         ctermfg=144   ctermbg=NONE  cterm=NONE            guifg=#afaf87 guibg=NONE    gui=NONE 
+  hi CursorLine                     ctermfg=NONE  ctermbg=233   cterm=NONE            guifg=NONE    guibg=#121212 gui=NONE
+  hi Error                          ctermfg=230   ctermbg=88    cterm=NONE            guifg=#ffffd7 guibg=#870000 gui=NONE 
   hi WarningMsg                     ctermfg=221   ctermbg=88    cterm=NONE            guifg=#ffd75f guibg=#870000 gui=NONE 
   hi VertSplit                      ctermfg=250   ctermbg=237   cterm=NONE            guifg=#bcbcbc guibg=#3a3a3a gui=NONE
-  hi EndOfBuffer                    ctermfg=250   ctermbg=234   cterm=NONE            guifg=#bcbcbc guibg=#1c1c1c gui=NONE
+  hi EndOfBuffer                    ctermfg=251   ctermbg=234   cterm=NONE            guifg=#c6c6c6 guibg=#1c1c1c gui=NONE
   hi CursorLineFold                 ctermfg=246   ctermbg=237   cterm=NONE            guifg=#949494 guibg=#3a3a3a gui=NONE
   hi MatchParen                     ctermfg=NONE  ctermbg=237   cterm=NONE            guifg=NONE    guibg=#3a3a3a gui=NONE
-  hi Function                       ctermfg=139   ctermbg=NONE  cterm=NONE            guifg=#af87af guibg=NONE    gui=NONE
-  hi DiffAdd                        ctermfg=232   ctermbg=65    cterm=NONE            guifg=#080808 guibg=#87af87 gui=NONE
+  hi Function                       ctermfg=95    ctermbg=NONE  cterm=NONE            guifg=#875f5f guibg=NONE    gui=NONE
+  hi DiffAdd                        ctermfg=232   ctermbg=65    cterm=NONE            guifg=#080808 guibg=#5f875f gui=NONE
   hi DiffChange                     ctermfg=232   ctermbg=229   cterm=NONE            guifg=#080808 guibg=#ffffaf gui=NONE
   hi DiffText                       ctermfg=229   ctermbg=NONE  cterm=NONE            guifg=#ffffaf guibg=NONE    gui=NONE
   hi DiffDelete                     ctermfg=230   ctermbg=88    cterm=NONE            guifg=#ffffd7 guibg=#870000 gui=NONE
@@ -55,13 +55,12 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi TabLineSel                     ctermfg=230   ctermbg=237   cterm=NONE            guifg=#ffffd7 guibg=#3a3a3a gui=NONE
   hi TabLine                        ctermfg=244   ctermbg=237   cterm=NONE            guifg=#808080 guibg=#3a3a3a gui=NONE
   hi Delimiter                      ctermfg=67    ctermbg=NONE  cterm=NONE            guifg=#5f87af guibg=NONE    gui=NONE
-  hi Ignore                         ctermfg=13    ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
+  hi Ignore                         ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
   hi Underlined                     ctermfg=NONE  ctermbg=NONE  cterm=underline       guifg=NONE    guibg=NONE    gui=underline
   hi SpellBad                       ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
   hi SpellCap                       ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
   hi SpellLocal                     ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
   hi SpellRare                      ctermfg=NONE  ctermbg=NONE  cterm=undercurl       guifg=NONE    guibg=NONE    gui=undercurl
-  hi Tag                            ctermfg=67    ctermbg=NONE  cterm=underline       guifg=#5f87af guibg=NONE    gui=underline
 
 " Do not assign
 " hi CursorIM                       ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=NONE    gui=NONE
@@ -119,6 +118,7 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi! link StorageClass Type
   hi! link Structure Type
   hi! link TabLineFill TabLine
+  hi! link Tag Delimiter
   hi! link Typedef Type
   hi! link Todo Special
   hi! link Tooltip StatusLine
@@ -126,12 +126,12 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
 
 " Markdown
 
-  hi markdownHeadingDelimiter       ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE       gui=NONE
-  hi MarkdownItalic                 ctermfg=67    ctermbg=NONE  cterm=NONE             guifg=#5f87af guibg=NONE       gui=NONE
-  hi markdownBold                   ctermfg=67    ctermbg=NONE  cterm=bold             guifg=#5f87af guibg=NONE       gui=bold
-  hi markdownBoldItalic             ctermfg=110   ctermbg=NONE  cterm=bold             guifg=#87afd7 guibg=NONE       gui=bold
+  hi markdownHeadingDelimiter       ctermfg=109   ctermbg=NONE  cterm=NONE             guifg=#87afaf guibg=NONE       gui=NONE
+  hi MarkdownItalic                 ctermfg=109   ctermbg=NONE  cterm=NONE             guifg=#87afaf guibg=NONE       gui=NONE
+  hi markdownBold                   ctermfg=109   ctermbg=NONE  cterm=bold             guifg=#87afaf guibg=NONE       gui=bold
+  hi markdownBoldItalic             ctermfg=152   ctermbg=NONE  cterm=bold             guifg=#afd7d7 guibg=NONE       gui=bold
   hi markdownCode                   ctermfg=244   ctermbg=NONE  cterm=NONE             guifg=#808080 guibg=NONE       gui=NONE
-  hi markdownRule                   ctermfg=110   ctermbg=NONE  cterm=NONE             guifg=#87afd7 guibg=NONE       gui=NONE
+  hi markdownRule                   ctermfg=152   ctermbg=NONE  cterm=NONE             guifg=#afd7d7 guibg=NONE       gui=NONE
 
   hi! link markdownHeadingRule markdownHeadingDelimiter
   hi! link markdownBlockquote markdownHeadingDelimiter
@@ -165,26 +165,3 @@ elseif &t_Co == 8 || $TERM !~# "^linux" || &t_Co == 16
 
 endif
 
-" 232  Grey3            #080808  rgb(8,8,8)        hsl(0,0%,3%)
-" 234  Grey11           #1c1c1c  rgb(28,28,28)     hsl(0,0%,10%)
-" 237  Grey23           #3a3a3a  rgb(58,58,58)     hsl(0,0%,22%)
-" 242  Grey42           #6c6c6c  rgb(108,108,108)  hsl(0,0%,40%)
-" 243  Grey46           #767676  rgb(118,118,118)  hsl(0,0%,46%)
-" 244  Grey50           #808080  rgb(128,128,128)  hsl(0,0%,50%)
-" 246  Grey58           #949494  rgb(148,148,148)  hsl(0,0%,58%)
-" 250  Grey74           #bcbcbc  rgb(188,188,188)  hsl(0,0%,73%)
-" 255  Grey93           #eeeeee  rgb(238,238,238)  hsl(0,0%,93%)
-" 66   PaleTurquoise4   #5f8787  rgb(95,135,135)   hsl(180,17%,45%)
-" 67   SteelBlue        #5f87af  rgb(95,135,175)   hsl(210,33%,52%)
-" 73   CadetBlue        #5fafaf  rgb(95,175,175)   hsl(180,33%,52%)
-" 88   DarkRed          #870000  rgb(135,0,0)      hsl(0,100%,26%)
-" 139  Grey63           #af87af  rgb(175,135,175)  hsl(300,20%,60%)
-" 108  DarkSeaGreen     #87af87  rgb(135,175,135)  hsl(120,20%,60%)
-" 110  LightSkyBlue3    #87afd7  rgb(135,175,215)  hsl(210,50%,68%)
-" 134  MediumOrchid     #af5fd7  rgb(175,95,215)   hsl(280,60%,60%)
-" 150  DarkSeaGreen3    #afd787  rgb(175,215,135)  hsl(90,50%,68%)
-" 169  HotPink2         #d75faf  rgb(215,95,175)   hsl(320,60%,60%)
-" 174  LightPink3       #d78787  rgb(215,135,135)  hsl(0,50%,68%)
-" 221  LightGoldenrod2  #ffd75f  rgb(255,215,95)   hsl(45,100%,68%)
-" 229  Wheat1           #ffffaf  rgb(255,255,175)  hsl(60,100%,84%)
-" 230  Cornsilk1        #ffffd7  rgb(255,255,215)  hsl(60,100%,92%)
