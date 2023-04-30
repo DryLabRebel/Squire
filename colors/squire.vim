@@ -32,7 +32,7 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi lCursor                        ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#af5fd7 gui=NONE
   hi Special                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
   hi Comment                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
-  hi StatusLine                     ctermfg=233   ctermbg=187   cterm=NONE            guifg=#121212 guibg=#d7d7af gui=NONE
+  hi StatusLine                     ctermfg=233   ctermbg=73    cterm=NONE            guifg=#121212 guibg=#5fafaf gui=NONE
   hi StatusLineNC                   ctermfg=187   ctermbg=233   cterm=NONE            guifg=#d7d7af guibg=#121212 gui=NONE
   hi Statement                      ctermfg=102   ctermbg=NONE  cterm=NONE            guifg=#878787 guibg=NONE    gui=NONE
   hi Type                           ctermfg=181   ctermbg=NONE  cterm=NONE            guifg=#d7afaf guibg=NONE    gui=NONE
