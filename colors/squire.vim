@@ -32,7 +32,7 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi lCursor                        ctermfg=NONE  ctermbg=NONE  cterm=NONE            guifg=NONE    guibg=#af5fd7 gui=NONE
   hi Special                        ctermfg=108   ctermbg=NONE  cterm=NONE            guifg=#87af87 guibg=NONE    gui=NONE
   hi Comment                        ctermfg=66    ctermbg=NONE  cterm=NONE            guifg=#5f8787 guibg=NONE    gui=NONE
-  hi StatusLine                     ctermfg=233   ctermbg=73    cterm=NONE            guifg=#121212 guibg=#5fafaf gui=NONE
+  hi StatusLine                     ctermfg=233   ctermbg=66    cterm=NONE            guifg=#121212 guibg=#5f8787 gui=NONE
   hi StatusLineNC                   ctermfg=73    ctermbg=233   cterm=NONE            guifg=#5fafaf guibg=#121212 gui=NONE
   hi Statement                      ctermfg=109   ctermbg=NONE  cterm=NONE            guifg=#87afaf guibg=NONE    gui=NONE
   hi Type                           ctermfg=181   ctermbg=NONE  cterm=NONE            guifg=#d7afaf guibg=NONE    gui=NONE
@@ -146,10 +146,10 @@ if ($TERM =~ "256" || &t_Co >= 256) || has("gui_running")
   hi! link markdownError Error
   hi! link markdownAutomaticLink Constant
   hi! link markdownEscape Special
-  hi! link markdownUrl Constant
+  hi! link markdownUrl String
   hi! link markdownUrlTitleDelimiter Type
   hi! link markdownIdDeclaration Type
-  hi! link markdownLinkText Function
+  hi! link markdownLinkText Type
   hi! link markdownFootnote Function
   hi! link markdownFootnoteDefinition Function
   hi! link markdownUrlTitle String
