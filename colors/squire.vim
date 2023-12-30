@@ -1,12 +1,13 @@
-" Name: squire
-" Maintainer: Geoff English <geoff_anthony@hotmail.com>
-" Last Update: 01-05-2023
+" Name:         squire
+" Maintainer:   Geoff English <geoff_anthony - hotmail>
+" Last Update:  01-05-2023
 " Website:      https://github.com/DryLabRebel/Squire
 " License:      MIT
 
-" Inspired by apprentice, it explicitly sets a few extra
-" options in markdown, and has a slightly higher contrast against the
-" background, for working in more well lit environments
+" A medium contrast, low saturation colorscheme 
+" inspired by apprentice (https://github.com/romainl/Apprentice/tree/master).
+" Squire explicitly sets a few extra options in markdown, 
+" and has a slightly higher contrast against the background.
 
 hi clear
 if exists("syntax_on")
