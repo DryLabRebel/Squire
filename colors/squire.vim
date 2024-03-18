@@ -2,7 +2,7 @@
 " Maintainer:  Geoff English <geoff_anthony - hotmail>
 " Website:     https://github.com/DryLabRebel/Squire
 " License:     MIT
-" Last Update: 31-12-2023
+" Last Update: 18-03-2024
 
 " A medium contrast, low saturation colorscheme 
 " inspired by apprentice (https://github.com/romainl/Apprentice/tree/master).
@@ -162,8 +162,10 @@ hi! link markdownUrlTitle String
 hi! link markdownIdDelimiter Title
 
 " 256 colors
+" ----------------------
 
 if s:t_Co >= 256
+
   hi Normal                         ctermfg=230   ctermbg=234   cterm=NONE
   hi Visual                         ctermfg=NONE  ctermbg=237   cterm=NONE
   hi VisualNOS                      ctermfg=NONE  ctermbg=243   cterm=NONE
@@ -300,42 +302,142 @@ if s:t_Co >= 256
 
 endif
 
+" 8-16 colours
+" ----------------------
+
 if s:t_Co == 8 || s:t_Co == 16
 
-  set background=dark
+  hi Normal                         ctermfg=15    ctermbg=0     cterm=NONE
+  hi Visual                         ctermfg=NONE  ctermbg=8     cterm=NONE
+  hi VisualNOS                      ctermfg=NONE  ctermbg=8     cterm=NONE
+  hi Constant                       ctermfg=5     ctermbg=NONE  cterm=NONE
+  hi Search                         ctermfg=7     ctermbg=8     cterm=NONE
+  hi IncSearch                      ctermfg=NONE  ctermbg=8     cterm=NONE
+  hi Cursor                         ctermfg=NONE  ctermbg=NONE  cterm=NONE
+  hi lCursor                        ctermfg=NONE  ctermbg=NONE  cterm=NONE
+  hi Special                        ctermfg=2     ctermbg=NONE  cterm=NONE
+  hi Comment                        ctermfg=6     ctermbg=NONE  cterm=NONE
+  hi StatusLine                     ctermfg=0     ctermbg=6     cterm=NONE
+  hi StatusLineNC                   ctermfg=6     ctermbg=0     cterm=NONE
+  hi Statement                      ctermfg=6     ctermbg=NONE  cterm=NONE
+  hi Type                           ctermfg=5     ctermbg=NONE  cterm=NONE
+  hi LineNr                         ctermfg=8     ctermbg=NONE  cterm=NONE
+  hi LineNrAbove                    ctermfg=7     ctermbg=NONE  cterm=NONE
+  hi String                         ctermfg=3     ctermbg=NONE  cterm=NONE
+  hi CursorLine                     ctermfg=NONE  ctermbg=0     cterm=NONE
+  hi Error                          ctermfg=15    ctermbg=1     cterm=NONE
+  hi WarningMsg                     ctermfg=3     ctermbg=1     cterm=NONE
+  hi VertSplit                      ctermfg=7     ctermbg=8     cterm=NONE
+  hi EndOfBuffer                    ctermfg=7     ctermbg=0     cterm=NONE
+  hi CursorLineFold                 ctermfg=8     ctermbg=8     cterm=NONE
+  hi MatchParen                     ctermfg=NONE  ctermbg=8     cterm=NONE
+  hi Function                       ctermfg=5     ctermbg=NONE  cterm=NONE
+  hi DiffAdd                        ctermfg=0     ctermbg=2     cterm=NONE
+  hi DiffChange                     ctermfg=0     ctermbg=7     cterm=NONE
+  hi DiffText                       ctermfg=7     ctermbg=NONE  cterm=NONE
+  hi DiffDelete                     ctermfg=15    ctermbg=1     cterm=NONE
+  hi Title                          ctermfg=15    ctermbg=NONE  cterm=bold
+  hi TabLineSel                     ctermfg=15    ctermbg=8     cterm=NONE
+  hi TabLine                        ctermfg=8     ctermbg=8     cterm=NONE
+  hi Delimiter                      ctermfg=4     ctermbg=NONE  cterm=NONE
+  hi Ignore                         ctermfg=NONE  ctermbg=NONE  cterm=NONE
+  hi Underlined                     ctermfg=NONE  ctermbg=NONE  cterm=underline
+  hi SpellBad                       ctermfg=NONE  ctermbg=NONE  cterm=undercurl
+  hi SpellCap                       ctermfg=NONE  ctermbg=NONE  cterm=undercurl
+  hi SpellLocal                     ctermfg=NONE  ctermbg=NONE  cterm=undercurl
+  hi SpellRare                      ctermfg=NONE  ctermbg=NONE  cterm=undercurl
 
-  hi Normal                         ctermfg=white     ctermbg=NONE  cterm=NONE
-  hi Terminal                       ctermfg=white     ctermbg=NONE  cterm=NONE
+" Markdown
+
+  hi markdownHeadingDelimiter       ctermfg=6     ctermbg=NONE  cterm=NONE
+  hi MarkdownItalic                 ctermfg=6     ctermbg=NONE  cterm=NONE
+  hi markdownBold                   ctermfg=6     ctermbg=NONE  cterm=bold
+  hi markdownBoldItalic             ctermfg=3     ctermbg=NONE  cterm=bold
+  hi markdownCode                   ctermfg=8     ctermbg=NONE  cterm=NONE
+  hi markdownRule                   ctermfg=3     ctermbg=NONE  cterm=NONE
+
+" Links
+
+  hi! link Terminal Normal
+  hi! link Boolean Constant
+  hi! link Character Constant
+  hi! link Conditional Statement
+  hi! link ColorColumn CursorLine
+  hi! link Conceal Error
+  hi! link CurSearch IncSearch
+  hi! link CursorColumn CursorLine
+  hi! link CursorLineNr LineNrAbove
+  hi! link CursorLineSign CursorLineNr
+  hi! link Debug Special
+  hi! link Define Special
+  hi! link Directory Type
+  hi! link ErrorMsg Error
+  hi! link Exception Special
+  hi! link Float Constant
+  hi! link FoldColumn VertSplit
+  hi! link Folded VertSplit
+  hi! link HtmlLink Type
+  hi! link Identifier Function
+  hi! link Include Special
+  hi! link Keyword Function
+  hi! link Label Statement
+  hi! link LineNrBelow LineNrAbove
+  hi! link Macro Special
+  hi! link Menu StatusLine
+  hi! link MoreMsg Comment
+  hi! link ModeMsg Comment
+  hi! link NonText VertSplit
+  hi! link Number Constant
+  hi! link Operator Statement
+  hi! link Pmenu StatusLineNC
+  hi! link PmenuSel StatusLine
+  hi! link PmenuSbar StatusLine
+  hi! link PmenuThumb StatusLineNC
+  hi! link PreProc Special
+  hi! link PreCondit Special
+  hi! link Question String
+  hi! link QuickFixLine PmenuSel
+  hi! link Repeat Statement
+  hi! link Scrollbar StatusLineNC
+  hi! link SignColumn LineNr
+  hi! link SpecialChar String
+  hi! link SpecialComment Special
+  hi! link SpecialKey Special
+  hi! link StatusLineTerm StatusLine
+  hi! link StatusLineTermNC StatusLineNC
+  hi! link StorageClass Type
+  hi! link Structure Type
+  hi! link TabLineFill TabLine
+  hi! link Tag Delimiter
+  hi! link Typedef Type
+  hi! link Todo Special
+  hi! link Tooltip StatusLine
+  hi! link WildMenu StatusLineNC
+
+" Markdown Links
+
+  hi! link markdownHeadingRule markdownHeadingDelimiter
+  hi! link markdownBlockquote markdownHeadingDelimiter
+  hi! link markdownListMarker markdownHeadingDelimiter
+  hi! link markdownOrderedListMarker markdownHeadingDelimiter
+  hi! link markdownStrike markdownItalic
+  hi! link markdownStrikeDelimiter markdownItalic
+  hi! link markdownId markdownBold
+  hi! link markdownUrlDelimiter markdownBold
+  hi! link markdownCodeBlock markdownCode
+  hi! link markdownCodeDelimiter markdownCode
+  hi! link markdownError Error
+  hi! link markdownAutomaticLink Constant
+  hi! link markdownEscape Special
+  hi! link markdownUrl String
+  hi! link markdownUrlTitleDelimiter Type
+  hi! link markdownIdDeclaration Type
+  hi! link markdownLinkText Type
+  hi! link markdownFootnote Function
+  hi! link markdownFootnoteDefinition Function
+  hi! link markdownUrlTitle String
+  hi! link markdownIdDelimiter Title
+
   unlet s:t_Co
   finish
-
-endif
-
-" 65            DarkSeaGreen4     #5f875f rgb(95,135,95)    hsl(120,17%,45%)
-" 66            PaleTurquoise4    #5f8787 rgb(95,135,135)   hsl(180,17%,45%)
-" 67            SteelBlue         #5f87af rgb(95,135,175)   hsl(210,33%,52%)
-" 73            CadetBlue         #5fafaf rgb(95,175,175)   hsl(180,33%,52%)
-" 88            DarkRed           #870000 rgb(135,0,0)      hsl(0,100%,26%)
-" 95            LightPink4        #875f5f rgb(135,95,95)    hsl(0,17%,45%)
-" 108           DarkSeaGreen      #87af87 rgb(135,175,135)  hsl(120,20%,60%)
-" 109           LightSkyBlue3     #87afaf rgb(135,175,175)  hsl(180,20%,60%)
-" 134           MediumOrchid      #af5fd7 rgb(175,95,215)   hsl(280,60%,60%)
-" 144           NavajoWhite3      #afaf87 rgb(175,175,135)  hsl(60,20%,60%)
-" 152           LightCyan3        #afd7d7 rgb(175,215,215)  hsl(180,33%,76%)
-" 174           LightPink3        #d78787 rgb(215,135,135)  hsl(0,50%,68%)
-" 181           MistyRose3        #d7afaf rgb(215,175,175)  hsl(0,33%,76%)
-" 187           LightYellow3      #d7d7af rgb(215,215,175)  hsl(60,33%,76%)
-" 221           LightGoldenrod2   #ffd75f rgb(255,215,95)   hsl(45,100%,68%)
-" 229           Wheat1            #ffffaf rgb(255,255,175)  hsl(60,100%,84%)
-" 230           Cornsilk1         #ffffd7 rgb(255,255,215)  hsl(60,100%,92%)
-" 232           Grey3             #080808 rgb(8,8,8)        hsl(0,0%,3%)
-" 233           Grey7             #121212 rgb(18,18,18)     hsl(0,0%,7%)
-" 234           Grey11            #1c1c1c rgb(28,28,28)     hsl(0,0%,10%)
-" 237           Grey23            #3a3a3a rgb(58,58,58)     hsl(0,0%,22%)
-" 243           Grey46            #767676 rgb(118,118,118)  hsl(0,0%,46%)
-" 244           Grey50            #808080 rgb(128,128,128)  hsl(0,0%,50%)
-" 246           Grey58            #949494 rgb(148,148,148)  hsl(0,0%,58%)
-" 250           Grey74            #bcbcbc rgb(188,188,188)  hsl(0,0%,73%)
-" 251           Grey78            #c6c6c6 rgb(198,198,198)  hsl(0,0%,77%)
-" 255           Grey93            #eeeeee rgb(238,238,238)  hsl(0,0%,93%)
 
