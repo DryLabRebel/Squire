@@ -441,3 +441,4 @@ if s:t_Co == 8 || s:t_Co == 16
   unlet s:t_Co
   finish
 
+endif
