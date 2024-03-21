@@ -160,6 +160,7 @@ hi! link markdownFootnote Function
 hi! link markdownFootnoteDefinition Function
 hi! link markdownUrlTitle String
 hi! link markdownIdDelimiter Title
+hi! link markdownTodo markdownHeadingDelimiter
 
 " 256 colors
 " ----------------------
@@ -296,6 +297,8 @@ if s:t_Co >= 256
   hi! link markdownFootnoteDefinition Function
   hi! link markdownUrlTitle String
   hi! link markdownIdDelimiter Title
+  hi! link markdownTodo Special
+  hi! link markdownNote Special
 
   unlet s:t_Co
   finish
@@ -437,6 +440,7 @@ if s:t_Co == 8 || s:t_Co == 16
   hi! link markdownFootnoteDefinition Function
   hi! link markdownUrlTitle String
   hi! link markdownIdDelimiter Title
+  hi! link markdownTodo markdownHeadingDelimiter
 
   unlet s:t_Co
   finish
